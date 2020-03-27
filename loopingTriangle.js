@@ -1,11 +1,16 @@
 function loopingTriangle(row) {
+    let accu = '';
     for (let i=0; i<row; i++) {
-        for (let j=i; j<=i; j++) {
-            document.write('#');
+        for (let j=0; j<=i; j++) {
+            accu += '#';
         }
-        return document.write('<br/>');
+        accu += '<br>';
     }
+    return accu
 }
 
-let elt = document.getElementsByClassName('triangle');
-elt.innerHTML = "loopingTriangle(10)";
+document.getElementById("value-submit").addEventListener("click", function() {
+    let inputVal = document.getElementById("value-field").value;
+    //document.getElementById("input-value").innerHTML = inputVal;
+    document.getElementById("triangle").innerHTML = loopingTriangle(inputVal);
+});

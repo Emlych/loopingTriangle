@@ -16,12 +16,20 @@
     </header>
 
     <section>
-        <h1>Exercice page 37, Program Structure lesson.</h1>
+        <h1>Exercice page 37, Program Structure Lesson.</h1>
 
-        <p>Write a loop that makes seven calls to console.log to ouput a nice triangle.</p>
+        <p>Write a loop that makes the number of calls you chose to ouput a nice triangle.</p>
 
-        <div class="triangle">      
+        <div class="form">
+            <label for="valueField">Définissez la taille du triangle : </label>
+            <input type="text" id="value-field" class="valueField"/>
+            <input type="submit" value="Valider" id="value-submit" class="valueSubmit"/>
         </div>
+
+        <div class="inputValue" id="input-value">
+        </div>
+
+        <div id="triangle"></div>
 
         <script src="loopingTriangle.js" async></script>
 
